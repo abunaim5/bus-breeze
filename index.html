@@ -15,8 +15,8 @@
 <body class="font-inter">
     <header>
         <!-- nav section start -->
-        <nav class="container mx-auto">
-            <div class="navbar bg-base-100">
+        <nav class="container mx-auto mt-10">
+            <div class="navbar px-0 bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
                         <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
@@ -34,8 +34,8 @@
                             <li><a>Search</a></li>
                         </ul>
                     </div>
-                    <h1 class="font-raleway text-4xl font-extrabold text-[#030712]">Bus<span
-                            class="text-[#1DD100]">B</span>reeze</h1>
+                    <h2 class="font-raleway text-4xl font-extrabold text-[#030712]">Bus<span
+                            class="text-[#1DD100]">B</span>reeze</h2>
                 </div>
                 <div class="navbar-center hidden lg:flex">
                     <ul class="menu menu-horizontal px-1 font-raleway text-lg font-medium text-[#030712B3]">
@@ -55,8 +55,51 @@
             </div>
         </nav>
         <!-- banner section start -->
-        <section>
-
+        <section
+            class="container mx-auto mt-10 text-center bg-[url('images/banner.png')] bg-cover bg-no-repeat min-h-[720px] rounded-[36px] flex items-center justify-center flex-col relative">
+            <!-- banner text -->
+            <div class="space-y-16">
+                <h1 class="text-7xl font-extrabold font-raleway text-white">End-to-End Travel with <br> <span
+                        class="text-[#1DD100]">BusBreeze</span></h1>
+                <p class="text-lg text-white">"Welcome to BusBreeze, your ultimate ticket to seamless bus travel. Say
+                    goodbye to <br>long queues and complicated booking processes.</p>
+                <button
+                    class="bg-[#1DD100] px-6 py-3 font-raleway text-[#030712] text-xl font-bold rounded-xl border-2 border-transparent hover:text-white hover:bg-transparent hover:border-[#1DD100] transition duration-700">Buy
+                    Tickets</button>
+            </div>
+            <!-- banner cards -->
+            <div class="flex gap-6 items-center absolute top-[90%] transform translate-[-90%]">
+                <div
+                    class="bg-white px-12 py-8 flex items-center gap-6 text-left rounded-3xl border-b-4 border-[#1DD100]">
+                    <div>
+                        <img src="images/people.png" alt="">
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-4xl text-[#030712] font-bold">500K</h3>
+                        <p class="text-lg text-[#03071299]">Registered users</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white px-12 py-8 flex items-center gap-6 text-left rounded-3xl border-b-4 border-[#1DD100]">
+                    <div>
+                        <img src="images/ticket-cupon.png" alt="">
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-4xl text-[#030712] font-bold">1.7 lacks</h3>
+                        <p class="text-lg text-[#03071299]">Tickets sold</p>
+                    </div>
+                </div>
+                <div
+                    class="bg-white px-12 py-8 flex items-center gap-6 text-left rounded-3xl border-b-4 border-[#1DD100]">
+                    <div>
+                        <img src="images/stoppage.png" alt="">
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-4xl text-[#030712] font-bold">80K+</h3>
+                        <p class="text-lg text-[#03071299]">Rental partners</p>
+                    </div>
+                </div>
+            </div>
         </section>
     </header>
     <main></main>
