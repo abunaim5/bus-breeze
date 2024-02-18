@@ -26,5 +26,16 @@ for (const button of seatButton) {
         const ticketPriceText = getElementsInnerTextById('ticket-price');
         const ticketPrice = parseFloat(ticketPriceText);
         appendTableDataById('tbody', buttonId, 'Economy', ticketPriceText);
+
+        totalPrice = totalPrice + ticketPrice;
+        setElementsInnerTextById('total-price', totalPrice);
+        grandTotal = totalPrice;
+        setElementsInnerTextById('grand-total', grandTotal);
     })
+}
+
+// successful purchase ticket modal
+function successModal() {
+    const myModal = getElementsById('my-modal');
+    myModal.showModal();
 }
