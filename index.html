@@ -63,7 +63,7 @@
                         class="text-[#1DD100]">BusBreeze</span></h1>
                 <p class="text-lg text-white">Welcome to BusBreeze, your ultimate ticket to seamless bus travel. Say
                     goodbye to <br>long queues and complicated booking processes.</p>
-                <button
+                <button onclick="scrollSection()" id="buy-ticket"
                     class="bg-[#1DD100] px-6 py-3 font-raleway text-[#030712] text-xl font-bold rounded-xl border-2 border-transparent hover:text-white hover:bg-transparent hover:border-[#1DD100] transition duration-700">Buy
                     Tickets</button>
             </div>
@@ -144,7 +144,7 @@
             </div>
         </section>
         <!-- ticket booking section start -->
-        <section class="bg-[#F7F8F8] rounded-t-[4.5rem] border-t-4 mt-40 py-40 border-[#1DD100]">
+        <section id="ticket-booking" class="bg-[#F7F8F8] rounded-t-[4.5rem] border-t-4 mt-40 py-40 border-[#1DD100]">
             <div class="container mx-auto">
                 <div class="text-center space-y-6">
                     <h2 class="text-[2.5rem] text-[#030712] font-raleway font-bold text-center">
@@ -506,6 +506,8 @@
         </section>
     </main>
     <footer></footer>
+    <script src="js/utility.js"></script>
+    <script src="js/script.js"></script>
 </body>
 
 </html>
