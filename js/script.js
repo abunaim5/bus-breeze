@@ -90,11 +90,16 @@ function couponCodeApply() {
     }
 }
 
-
-
-
 // successful purchase ticket modal
 function successModal() {
     const myModal = getElementsById('my-modal');
     myModal.showModal();
+}
+
+// continue button clear all
+function continueClearAll() {
+    const navContainer = getElementsById('nav-section');
+    navContainer.scrollIntoView()
+    location.reload();
+    return false;
 }
