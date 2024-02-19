@@ -53,10 +53,10 @@ function removeElementsAttributeById(elementId, attributeName) {
 function appendTableDataById(elementId, td1, td2, td3) {
     const element = document.getElementById(elementId);
     const newRow = document.createElement('tr');
-    newRow.classList.add('flex', 'justify-between');
     const newData1 = document.createElement('td');
     const newData2 = document.createElement('td');
     const newData3 = document.createElement('td');
+    newData3.classList.add('text-end');
     newData1.appendChild(document.createTextNode(td1));
     newData2.appendChild(document.createTextNode(td2));
     newData3.appendChild(document.createTextNode(td3));
