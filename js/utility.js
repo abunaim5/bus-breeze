@@ -31,9 +31,10 @@ function getInputValueById(elementId) {
 }
 
 // set elements background color by id
-function setElementsBgColorById(elementId) {
+function setElementsColorById(elementId) {
     const element = document.getElementById(elementId);
     element.style.backgroundColor = '#1DD100';
+    element.style.color = 'white';
 }
 
 // set elements attribute by id

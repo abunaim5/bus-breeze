@@ -20,8 +20,6 @@ for (const button of seatButton) {
 
         const selectedSeatText = getElementsInnerTextById('seat-count');
         const selectedSeat = parseInt(selectedSeatText);
-        // const numberText = getInputValueById('number-field');
-        // const number = parseInt(numberText);
         if (selectedSeat === 3) {
             removeElementsAttributeById('coupon-field', 'disabled');
             removeElementsAttributeById('apply-btn', 'disabled');
@@ -37,8 +35,7 @@ for (const button of seatButton) {
         setElementsInnerTextById('available-seat', availableSeat);
 
         setElementsInnerTextById('seat-count', seatCount);
-        // console.log(seatCount);
-        setElementsBgColorById(buttonId);
+        setElementsColorById(buttonId);
         setElementsAttributeById(buttonId, 'disabled');
 
         const ticketPriceText = getElementsInnerTextById('ticket-price');
@@ -55,11 +52,9 @@ for (const button of seatButton) {
 // number input field function for enable next button
 document.addEventListener('keyup', function (e) {
     let phoneNumberText = e.target.value;
-    // let phoneNumber = parseInt(phoneNumberText);
-    console.log(phoneNumberText.length);
     const selectedSeatText = getElementsInnerTextById('seat-count');
     const selectedSeat = parseInt(selectedSeatText);
-    if (selectedSeat > 0 && phoneNumberText.length > 0) {
+    if (selectedSeat > 0 && phoneNumberText.length === 11) {
         removeElementsAttributeById('next-btn', 'disabled')
     }
     else {
@@ -70,18 +65,23 @@ document.addEventListener('keyup', function (e) {
 // coupon code apply
 function couponCodeApply() {
     const inputValue = getInputValueById('coupon-field');
+    const discountedContainer = getElementsById('discounted-container');
     if (inputValue === 'NEW15' || inputValue === 'Couple 20') {
         if (inputValue === 'NEW15') {
             const discount = (totalPrice * 15) / 100;
             const discountedPrice = grandTotal - discount;
+            setElementsInnerTextById('total-discount', discount);
             setElementsInnerTextById('grand-total', discountedPrice);
             setElementsAttributeById('coupon-input-container', 'hidden');
+            discountedContainer.classList.remove('hidden');
         }
         else if (inputValue === 'Couple 20') {
             const discount = (totalPrice * 20) / 100;
             const discountedPrice = grandTotal - discount;
+            setElementsInnerTextById('total-discount', discount);
             setElementsInnerTextById('grand-total', discountedPrice);
             setElementsAttributeById('coupon-input-container', 'hidden');
+            discountedContainer.classList.remove('hidden');
         }
     }
     else {

@@ -485,6 +485,10 @@
                                         disabled>Apply</button>
                                 </label>
                             </div>
+                            <div id="discounted-container" class="flex justify-between py-3 px-4 hidden">
+                                <h4 class="font-medium text-[#030712]">Discounted price</h4>
+                                <h4 class="font-medium text-[#030712]">BDT <span id="total-discount">0</span></h4>
+                            </div>
                             <div class="flex justify-between py-3 px-4">
                                 <h4 class="font-medium text-[#030712]">Grand Total</h4>
                                 <h4 class="font-medium text-[#030712]">BDT <span id="grand-total">0</span></h4>
@@ -498,19 +502,19 @@
                             <div class="label">
                                 <span class="text-[#030712] font-semibold">Passenger Name*</span>
                             </div>
-                            <input type="text" placeholder="Enter your name"
+                            <input id="name-field" type="text" placeholder="Enter your name"
                                 class="input mb-4 text-[#03071266] input-bordered w-full" />
 
                             <div class="label">
                                 <span class="text-[#030712] font-semibold">Phone Number*</span>
                             </div>
                             <input id="number-field" type="number" placeholder="Enter your phone number"
-                                class="input mb-4 text-[#03071266] input-bordered w-full" />
+                                class="input mb-4 text-[#03071266] input-bordered w-full" required />
 
                             <div class="label">
                                 <span class="text-[#030712] font-semibold">Email ID</span>
                             </div>
-                            <input type="email" placeholder="Enter your email id"
+                            <input id="email-field" type="email" placeholder="Enter your email id"
                                 class="input text-[#03071266] input-bordered w-full" />
                             <div class="mt-8">
                                 <button id="next-btn" onclick="successModal()"
