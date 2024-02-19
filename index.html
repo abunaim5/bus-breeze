@@ -139,7 +139,7 @@
                         <img src="images/cupon-devider.png" alt="">
                     </div>
                     <div class="text-center space-y-1">
-                        <h3 class="text-3xl text-[#030712] font-bold font-raleway">NEW15</h3>
+                        <h3 id="coupon-new15" class="text-3xl text-[#030712] font-bold font-raleway">NEW15</h3>
                         <p class="text-xl text-[#03071266] font-raleway font-medium">Coupon Code</p>
                     </div>
                 </div>
@@ -153,7 +153,7 @@
                         <img src="images/cupon-devider.png" alt="">
                     </div>
                     <div class="text-center space-y-1">
-                        <h3 class="text-3xl text-[#030712] font-bold font-raleway">Couple 20</h3>
+                        <h3 id="coupon-cuple" class="text-3xl text-[#030712] font-bold font-raleway">Couple 20</h3>
                         <p class="text-xl text-[#03071266] font-raleway font-medium">Coupon Code</p>
                     </div>
                 </div>
@@ -476,10 +476,12 @@
                                 <h4 class="font-medium text-[#030712]">Total Price</h4>
                                 <h4 class="font-medium text-[#030712]">BDT <span id="total-price">0</span></h4>
                             </div>
-                            <div class="px-3">
+                            <div id="coupon-input-container" class="px-3">
                                 <label class="input flex items-center gap-2 pr-1">
-                                    <input type="text" class="grow" placeholder="Have any coupon?" disabled />
-                                    <button class="bg-[#1DD100] px-4 py-2 text-white font-semibold rounded-lg"
+                                    <input id="coupon-field" type="text" class="grow" placeholder="Have any coupon?"
+                                        disabled />
+                                    <button onclick="couponCodeApply()" id="apply-btn"
+                                        class="bg-[#1DD100] px-4 py-2 text-white font-semibold rounded-lg"
                                         disabled>Apply</button>
                                 </label>
                             </div>
@@ -502,7 +504,7 @@
                             <div class="label">
                                 <span class="text-[#030712] font-semibold">Phone Number*</span>
                             </div>
-                            <input type="number" placeholder="Enter your phone number"
+                            <input id="number-field" type="number" placeholder="Enter your phone number"
                                 class="input mb-4 text-[#03071266] input-bordered w-full" />
 
                             <div class="label">
@@ -511,8 +513,9 @@
                             <input type="email" placeholder="Enter your email id"
                                 class="input text-[#03071266] input-bordered w-full" />
                             <div class="mt-8">
-                                <button onclick="successModal()"
-                                    class="bg-[#1DD100] px-6 py-3 font-raleway w-full text-xl text-white font-extrabold rounded-xl border-2 border-transparent hover:text-[#1DD100] hover:bg-transparent hover:border-[#1DD100] transition duration-700">Next</button>
+                                <button id="next-btn" onclick="successModal()"
+                                    class="bg-[#1DD100] px-6 py-3 font-raleway w-full text-xl text-white font-extrabold rounded-xl border-2 border-transparent hover:text-[#1DD100] hover:bg-transparent hover:border-[#1DD100] transition duration-700"
+                                    disabled>Next</button>
                             </div>
                         </label>
                         <div class="flex gap-10 items-center justify-center mt-8 text-[#03071266]">

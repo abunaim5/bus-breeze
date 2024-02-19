@@ -23,6 +23,13 @@ function setElementsInnerTextById(elementId, text) {
     element.innerText = text;
 }
 
+// get elements input value by id
+function getInputValueById(elementId) {
+    const element = document.getElementById(elementId);
+    const value = element.value;
+    return value;
+}
+
 // set elements background color by id
 function setElementsBgColorById(elementId) {
     const element = document.getElementById(elementId);

@@ -12,16 +12,34 @@ let totalPrice = 0;
 let grandTotal = 0;
 let seatCount = 0;
 for (const button of seatButton) {
+    // const seatBtn = button.innerText;
+
     button.addEventListener('click', function (e) {
         const buttonId = button.innerText;
-        setElementsBgColorById(buttonId);
-        setElementsAttributeById(buttonId, 'disabled');
+
+
+        const selectedSeatText = getElementsInnerTextById('seat-count');
+        const selectedSeat = parseInt(selectedSeatText);
+        // const numberText = getInputValueById('number-field');
+        // const number = parseInt(numberText);
+        if (selectedSeat === 3) {
+            removeElementsAttributeById('coupon-field', 'disabled');
+            removeElementsAttributeById('apply-btn', 'disabled');
+        }
+
+        seatCount += 1;
+        if (seatCount > 4) {
+            alert('A maximum of 4 seats can be purchased');
+            return;
+        }
 
         availableSeat = availableSeat - 1;
         setElementsInnerTextById('available-seat', availableSeat);
 
-        seatCount += 1;
         setElementsInnerTextById('seat-count', seatCount);
+        // console.log(seatCount);
+        setElementsBgColorById(buttonId);
+        setElementsAttributeById(buttonId, 'disabled');
 
         const ticketPriceText = getElementsInnerTextById('ticket-price');
         const ticketPrice = parseFloat(ticketPriceText);
@@ -33,6 +51,46 @@ for (const button of seatButton) {
         setElementsInnerTextById('grand-total', grandTotal);
     })
 }
+
+// number input field function for enable next button
+document.addEventListener('keyup', function (e) {
+    let phoneNumberText = e.target.value;
+    // let phoneNumber = parseInt(phoneNumberText);
+    console.log(phoneNumberText.length);
+    const selectedSeatText = getElementsInnerTextById('seat-count');
+    const selectedSeat = parseInt(selectedSeatText);
+    if (selectedSeat > 0 && phoneNumberText.length > 0) {
+        removeElementsAttributeById('next-btn', 'disabled')
+    }
+    else {
+        setElementsAttributeById('next-btn', 'disabled');
+    }
+})
+
+// coupon code apply
+function couponCodeApply() {
+    const inputValue = getInputValueById('coupon-field');
+    if (inputValue === 'NEW15' || inputValue === 'Couple 20') {
+        if (inputValue === 'NEW15') {
+            const discount = (totalPrice * 15) / 100;
+            const discountedPrice = grandTotal - discount;
+            setElementsInnerTextById('grand-total', discountedPrice);
+            setElementsAttributeById('coupon-input-container', 'hidden');
+        }
+        else if (inputValue === 'Couple 20') {
+            const discount = (totalPrice * 20) / 100;
+            const discountedPrice = grandTotal - discount;
+            setElementsInnerTextById('grand-total', discountedPrice);
+            setElementsAttributeById('coupon-input-container', 'hidden');
+        }
+    }
+    else {
+        alert('Invalid Coupon Code');
+    }
+}
+
+
+
 
 // successful purchase ticket modal
 function successModal() {
