@@ -14,13 +14,13 @@
 </head>
 
 <body class="font-inter">
-    <header>
+    <header class="px-2">
         <!-- nav section start -->
-        <nav id="nav-section" class="container mx-auto mt-10">
+        <nav id="nav-section" class="container mx-auto mt-6">
             <div class="navbar px-0 bg-base-100">
                 <div class="navbar-start">
                     <div class="dropdown">
-                        <div tabindex="0" role="button" class="btn btn-ghost lg:hidden">
+                        <div tabindex="0" role="button" class="btn btn-ghost pl-0 lg:hidden">
                             <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
                                 stroke="currentColor">
                                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
@@ -35,7 +35,7 @@
                             <li><a>Search</a></li>
                         </ul>
                     </div>
-                    <h2 class="font-raleway text-4xl font-extrabold text-[#030712]">Bus<span
+                    <h2 class="font-raleway text-2xl md:text-4xl font-extrabold text-[#030712]">Bus<span
                             class="text-[#1DD100]">B</span>reeze</h2>
                 </div>
                 <div class="navbar-center hidden lg:flex">
@@ -48,7 +48,7 @@
                 </div>
                 <div class="navbar-end">
                     <button
-                        class="flex items-center gap-2 bg-[#1DD1001A] border border-[#1DD10066] px-6 py-3 font-raleway text-[#1DD100] text-xl font-bold rounded-xl">
+                        class="flex items-center gap-2 bg-[#1DD1001A] border border-[#1DD10066] px-4 md:px-6 py-2 md:py-3 font-raleway text-[#1DD100] text-base md:text-xl font-bold rounded-md md:rounded-xl">
                         Bus
                         <img src="images/bus-icon.png" alt="bus icon">
                     </button>
@@ -57,53 +57,55 @@
         </nav>
         <!-- banner section start -->
         <section
-            class="container mx-auto mt-10 text-center bg-[url('images/banner.png')] bg-cover bg-no-repeat min-h-[720px] rounded-[36px] flex items-center justify-center flex-col relative">
+            class="container mx-auto mt-10 text-center bg-[url('images/banner.png')] bg-contain md:bg-cover bg-no-repeat bg-center min-h-[180px] md:min-h-[720px] rounded-lg md:rounded-2xl xl:rounded-[36px] flex items-center justify-center flex-col relative">
             <!-- banner text -->
-            <div class="space-y-16">
-                <h1 class="text-7xl font-extrabold font-raleway text-white">End-to-End Travel with <br> <span
-                        class="text-[#1DD100]">BusBreeze</span></h1>
-                <p class="text-lg text-white">Welcome to BusBreeze, your ultimate ticket to seamless bus travel. Say
-                    goodbye to <br>long queues and complicated booking processes.</p>
+            <div class="space-y-0 md:space-y-16 h-full">
+                <h1 class="text-2xl md:text-6xl lg:text-7xl font-extrabold font-raleway text-white">End-to-End Travel
+                    with <br> <span class="text-[#1DD100]">BusBreeze</span></h1>
+                <p class="text-xs md:text-base lg:text-lg text-white pb-2 md:pb-0">Welcome to BusBreeze, your ultimate
+                    ticket to <br>seamless bus travel. <span class="hidden md:flex justify-center">Say
+                        goodbye to long queues and complicated booking processes.</span></p>
                 <button onclick="scrollSection()" id="buy-ticket"
-                    class="bg-[#1DD100] px-6 py-3 font-raleway text-[#030712] text-xl font-bold rounded-xl border-2 border-transparent hover:text-white hover:bg-transparent hover:border-[#1DD100] transition duration-700">Buy
+                    class="bg-[#1DD100] px-3 md:px-6 py-1 md:py-3 font-raleway text-[#030712] text-sm md:text-xl font-bold rounded-md md:rounded-xl border-2 border-transparent hover:text-white hover:bg-transparent hover:border-[#1DD100] transition duration-700">Buy
                     Tickets</button>
             </div>
             <!-- banner cards -->
-            <div class="flex gap-6 items-center absolute top-[90%] transform translate-[-90%]">
+            <div
+                class="flex flex-col xl:flex-row gap-6 w-full items-center justify-center px-0 xl:px-28 absolute top-[105%] xl:top-[90%] transform translate-[105%] xl:translate-[-90%]">
                 <div
-                    class="bg-white px-12 py-8 flex items-center gap-6 text-left rounded-3xl border-b-4 border-[#1DD100]">
+                    class="bg-white px-12 py-8 w-full flex items-center justify-center gap-6 text-left rounded-3xl border-b-4 border-[#1DD100]">
                     <div>
-                        <img src="images/people.png" alt="">
+                        <img class="object-contain" src="images/people.png" alt="">
                     </div>
                     <div class="space-y-2">
-                        <h3 class="text-4xl text-[#030712] font-bold">500K</h3>
+                        <h3 class="text-2xl md:text-4xl text-[#030712] font-bold">500K</h3>
                         <p class="text-lg text-[#03071299]">Registered users</p>
                     </div>
                 </div>
                 <div
-                    class="bg-white px-12 py-8 flex items-center gap-6 text-left rounded-3xl border-b-4 border-[#1DD100]">
+                    class="bg-white px-12 py-8 w-full flex items-center justify-center gap-6 text-left rounded-3xl border-b-4 border-[#1DD100]">
                     <div>
-                        <img src="images/ticket-cupon.png" alt="">
+                        <img class="object-contain" src="images/ticket-cupon.png" alt="">
                     </div>
                     <div class="space-y-2">
-                        <h3 class="text-4xl text-[#030712] font-bold">1.7 lacks</h3>
+                        <h3 class="text-2xl md:text-4xl text-[#030712] font-bold">1.7 lacks</h3>
                         <p class="text-lg text-[#03071299]">Tickets sold</p>
                     </div>
                 </div>
                 <div
-                    class="bg-white px-12 py-8 flex items-center gap-6 text-left rounded-3xl border-b-4 border-[#1DD100]">
+                    class="bg-white px-12 py-8 w-full flex items-center justify-center gap-6 text-left rounded-3xl border-b-4 border-[#1DD100]">
                     <div>
-                        <img src="images/stoppage.png" alt="">
+                        <img class="object-contain" src="images/stoppage.png" alt="">
                     </div>
                     <div class="space-y-2">
-                        <h3 class="text-4xl text-[#030712] font-bold">80K+</h3>
+                        <h3 class="text-2xl md:text-4xl text-[#030712] font-bold">80K+</h3>
                         <p class="text-lg text-[#03071299]">Rental partners</p>
                     </div>
                 </div>
             </div>
         </section>
     </header>
-    <main>
+    <main class="">
         <!-- successful purchase ticket modal section -->
         <section>
             <!-- Open the modal using ID.showModal() method -->
@@ -127,118 +129,131 @@
             </dialog>
         </section>
         <!-- best offer coupon section start -->
-        <section class="container mx-auto mt-52 space-y-12">
-            <h2 class="text-[2.5rem] text-[#030712] font-raleway font-bold text-center">Best offers for you</h2>
-            <div class="flex justify-between items-center gap-6">
-                <div class="flex items-center justify-center bg-[#FFBF0F] rounded-3xl gap-6 px-12 w-full">
+        <section class="container px-2 mx-auto mt-[550px] md:mt-[600px] xl:mt-52 space-y-12">
+            <h2 class="text-4xl md:text-[2.5rem] text-[#030712] font-raleway font-bold text-center">Best offers for you
+            </h2>
+            <div class="flex flex-col xl:flex-row justify-between items-center gap-6">
+                <div class="flex items-center justify-center bg-[#FFBF0F] rounded-3xl px-6 md:px-12 w-full">
                     <div class="flex-1 space-y-1">
-                        <h3 class="text-[2.5rem] text-[#030712CC] font-black">15% OFF</h3>
-                        <h5 class="text-xl text-[#030712CC] font-semibold">On your next purchase</h5>
-                        <p class="text-lg text-[#03071280] font-medium">Use by January 2024</p>
+                        <h3 class="text-2xl md:text-[2.5rem] text-[#030712CC] font-black">15% OFF</h3>
+                        <h5 class="text-xs md:text-xl text-[#030712CC] font-semibold">On your next purchase</h5>
+                        <p class="text-xs md:text-lg text-[#03071280] font-medium">Use by January 2024</p>
                     </div>
                     <div>
-                        <img src="images/cupon-devider.png" alt="">
+                        <img class="object-contain" src="images/cupon-devider.png" alt="">
                     </div>
                     <div class="text-center space-y-1">
-                        <h3 id="coupon-new15" class="text-3xl text-[#030712] font-bold font-raleway">NEW15</h3>
-                        <p class="text-xl text-[#03071266] font-raleway font-medium">Coupon Code</p>
+                        <h3 id="coupon-new15" class="text-xl md:text-3xl text-[#030712] font-bold font-raleway">NEW15
+                        </h3>
+                        <p class="text-base md:text-xl text-[#03071266] font-raleway font-medium">Coupon Code</p>
                     </div>
                 </div>
-                <div class="flex items-center justify-center bg-[#F78C9C] rounded-3xl gap-6 px-12 w-full">
+                <div class="flex items-center justify-center bg-[#F78C9C] rounded-3xl px-6 md:px-12 w-full">
                     <div class="flex-1 space-y-1">
-                        <h3 class="text-[2.5rem] text-[#030712CC] font-black">20% OFF</h3>
-                        <h5 class="text-xl text-[#030712CC] font-semibold">On your next purchase</h5>
-                        <p class="text-lg text-[#03071280] font-medium">Use by January 2024</p>
+                        <h3 class="text-2xl md:text-[2.5rem] text-[#030712CC] font-black">20% OFF</h3>
+                        <h5 class="text-xs md:text-xl text-[#030712CC] font-semibold">On your next purchase</h5>
+                        <p class="text-xs md:text-lg text-[#03071280] font-medium">Use by January 2024</p>
                     </div>
                     <div>
-                        <img src="images/cupon-devider.png" alt="">
+                        <img class="object-contain" src="images/cupon-devider.png" alt="">
                     </div>
                     <div class="text-center space-y-1">
-                        <h3 id="coupon-cuple" class="text-3xl text-[#030712] font-bold font-raleway">Couple 20</h3>
-                        <p class="text-xl text-[#03071266] font-raleway font-medium">Coupon Code</p>
+                        <h3 id="coupon-cuple" class="text-xl md:text-3xl text-[#030712] font-bold font-raleway">Couple
+                            20</h3>
+                        <p class="text-base md:text-xl text-[#03071266] font-raleway font-medium">Coupon Code</p>
                     </div>
                 </div>
             </div>
             <div class="text-center">
                 <button
-                    class="px-6 py-3 font-raleway text-[#1DD100] text-xl font-bold rounded-xl border-2 border-[#1DD100]">
+                    class="px-6 py-3 font-raleway text-[#1DD100] text-base md:text-xl font-bold rounded-xl border-2 border-[#1DD100]">
                     See All Offers
                 </button>
             </div>
         </section>
         <!-- ticket booking section start -->
-        <section id="ticket-booking" class="bg-[#F7F8F8] rounded-t-[4.5rem] border-t-4 mt-40 py-40 border-[#1DD100]">
+        <section id="ticket-booking"
+            class="bg-[#F7F8F8] px-2 rounded-t-[4.5rem] border-t-4 mt-24 lg:mt-32 xl:mt-40 py-24 lg:py-32 xl:py-40 border-[#1DD100]">
             <div class="container mx-auto">
                 <div class="text-center space-y-6">
                     <h2 class="text-[2.5rem] text-[#030712] font-raleway font-bold text-center">
                         Bus<span class="text-[#1DD100]">B</span>reeze
                     </h2>
-                    <p class="text-lg text-[#03071299]">
+                    <p class="text-sm md:text-lg text-[#03071299]">
                         With BusBreeze, booking your bus tickets is as easy as a gentle breeze. Enjoy hassle-free
                         journeys,
                         reliable <br>service, and unbeatable convenience.
                     </p>
                 </div>
-                <div class="flex items-center justify-between mt-10 bg-white px-12 rounded-3xl">
-                    <div class=" flex-1 space-y-2">
-                        <div class="flex justify-between items-center">
-                            <div class="flex items-center gap-2 ">
+                <div
+                    class="flex flex-col md:flex-row md:items-center justify-between mt-10 bg-white py-6 md:py-0 px-6 md:px-8 lg:px-12 rounded-3xl divide-y-2 md:divide-y-0 divide-dashed divide-[#1DD100]">
+                    <div class="flex-1 space-y-2 mb-10 md:mb-0">
+                        <div class="flex justify-between">
+                            <div class="flex flex-col md:flex-row md:items-center gap-2">
                                 <div>
-                                    <img src="images/bus-logo.png" alt="">
+                                    <img class="object-contain" src="images/bus-logo.png" alt="">
                                 </div>
                                 <div class="space-y-2">
-                                    <h3 class="text-3xl text-[#030712] font-bold font-raleway">Greenline Paribahan</h3>
-                                    <p class="text-lg text-[#03071266]">Coach-009-WEB ! AC_Business</p>
+                                    <h3
+                                        class="text-base md:text-xl xl:text-3xl text-[#030712] font-extrabold md:font-bold font-raleway">
+                                        Greenline Paribahan</h3>
+                                    <p class="text-xs md:text-base xl:text-lg text-[#03071266]">Coach-009-WEB !
+                                        AC_Business</p>
                                 </div>
                             </div>
                             <div>
                                 <button
-                                    class="flex items-center gap-2 bg-[#1DD1001A] px-6 py-3 text-[#1DD100] text-lg font-medium rounded-xl">
-                                    <img src="images/seat-green.png" alt="bus icon">
-                                    <span id="available-seat">40</span> Seats left
+                                    class="flex items-center gap-1 md:gap-2 bg-[#1DD1001A] px-3 lg:px-6 py-2 lg:py-3 text-[#1DD100] text-xs lg:text-base xl:text-lg font-medium rounded-lg lg:rounded-xl">
+                                    <img class="object-contain" src="images/seat-green.png" alt="bus icon">
+                                    <span id="available-seat">40</span>Seats left
                                 </button>
                             </div>
                         </div>
                         <!-- route section -->
-                        <div class="divide-y-2 divide-dashed bg-[#F7F8F8] p-6  rounded-3xl">
-                            <div class="flex justify-between items-center pb-6">
-                                <h6 class="text-lg font-semibold text-[#03071266]">Route</h6>
-                                <h3 class="text-lg text-[#030712] font-semibold font-raleway">Dhaka - Sylhet</h3>
+                        <div class="divide-y-2 divide-dashed bg-[#F7F8F8] p-6 rounded-xl md:rounded-3xl">
+                            <div class="flex justify-between items-center pb-2 xl:pb-6">
+                                <h6 class="text-base md:text-lg font-semibold text-[#03071266]">Route</h6>
+                                <h3 class="text-base md:text-lg text-[#030712] font-semibold font-raleway">Dhaka -
+                                    Sylhet</h3>
                             </div>
-                            <div class="flex justify-between items-center py-6">
-                                <h6 class="text-lg font-semibold text-[#03071266]">Departure Time</h6>
-                                <h3 class="text-lg text-[#030712] font-semibold font-raleway">9:00 PM</h3>
+                            <div class="flex justify-between items-center py-2 xl:py-6">
+                                <h6 class="text-base md:text-lg font-semibold text-[#03071266]">Departure Time</h6>
+                                <h3 class="text-base md:text-lg text-[#030712] font-semibold font-raleway">9:00 PM</h3>
                             </div>
-                            <div class="flex gap-6 pt-6">
-                                <button class="w-full bg-[#0307120D] px-6 py-3 text-[#030712CC] font-medium rounded-xl">
+                            <div class="flex flex-col xl:flex-row gap-2 xl:gap-6 pt-2 xl:pt-6">
+                                <button
+                                    class="w-full bg-[#0307120D] px-6 py-3 text-[#030712CC] font-medium text-sm md:text-base rounded-xl">
                                     Boarding Point - Laxmipur
                                 </button>
-                                <button class="w-full bg-[#0307120D] px-6 py-3 text-[#030712CC] font-medium rounded-xl">
+                                <button
+                                    class="w-full bg-[#0307120D] px-6 py-3 text-[#030712CC] font-medium text-sm md:text-base rounded-xl">
                                     Dropping Point - Bogura
                                 </button>
-                                <button class="w-full bg-[#0307120D] px-6 py-3 text-[#030712CC] font-medium rounded-xl">
+                                <button
+                                    class="w-full bg-[#0307120D] px-6 py-3 text-[#030712CC] font-medium text-sm md:text-base rounded-xl">
                                     Est. Time - 11 Hour
                                 </button>
                             </div>
                         </div>
                     </div>
-                    <div>
-                        <img src="images/info-devider.png" alt="">
+                    <div class="hidden md:flex items-center justify-center">
+                        <img class="object-contain w-full" src="images/info-devider.png" alt="">
                     </div>
-                    <div class="text-center space-y-2">
-                        <div class="flex justify-center">
-                            <img src="images/fare.png" alt="">
+                    <div class="text-center space-y-2 pt-8 md:pt-0">
+                        <div class="flex items-center justify-center">
+                            <img class="object-contain" src="images/fare.png" alt="">
                         </div>
-                        <h3 class="text-3xl text-[#030712] font-bold font-raleway"><span id="ticket-price">550</span>
+                        <h3 class="text-2xl lg:text-3xl text-[#030712] font-bold font-raleway"><span
+                                id="ticket-price">550</span>
                             Taka</h3>
-                        <p class="text-2xl font-raleway font-semibold text-[#03071266]">Per Seat</p>
+                        <p class="text-lg lg:text-2xl font-raleway font-semibold text-[#03071266]">Per Seat</p>
                     </div>
                 </div>
             </div>
 
             <!-- tickets section -->
             <div
-                class="container mx-auto bg-white rounded-3xl p-12 mt-12 grid grid-cols-2 gap-6 divide-x-4 divide-dashed">
+                class="container mx-auto bg-white rounded-3xl p-6 md:p-8 lg:p-12 mt-12 grid grid-cols-1 xl:grid-cols-2 gap-12 xl:gap-6 divide-y-4 xl:divide-y-0 xl:divide-x-4 divide-dashed">
                 <div class="space-y-6">
                     <div class="divide-y-2 divide-dashed">
                         <h4 class="text-2xl pb-4 text-[#030712] font-raleway font-semibold">Select Your Seat</h4>
@@ -254,7 +269,8 @@
                     </div>
                     <div class="flex w-full justify-end">
                         <div>
-                            <button class="btn min-w-32 text-[#03071280] text-lg font-medium border-none"><img
+                            <button
+                                class="btn w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none"><img
                                     src="images/wheel1.svg" alt=""></button>
                         </div>
                     </div>
@@ -263,182 +279,182 @@
                     <div class="space-y-6">
                         <!-- bus seat start -->
                         <!-- serial A -->
-                        <div class="flex gap-6 items-center text-lg text-[#03071280] font-medium">
+                        <div class="flex gap-2 md:gap-6 items-center text-lg text-[#03071280] font-medium">
                             <h4 class="w-6">A</h4>
                             <div class="flex justify-between w-full">
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="A1"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">A1</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">A1</button>
                                     <button id="A2"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">A2</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">A2</button>
                                 </div>
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="A3"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">A3</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">A3</button>
                                     <button id="A4"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">A4</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">A4</button>
                                 </div>
                             </div>
                         </div>
                         <!-- serial B -->
-                        <div class="flex gap-6 items-center text-lg text-[#03071280] font-medium">
+                        <div class="flex gap-2 md:gap-6 items-center text-lg text-[#03071280] font-medium">
                             <h4 class="w-6">B</h4>
                             <div class="flex justify-between w-full">
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="B1"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">B1</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">B1</button>
                                     <button id="B2"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">B2</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">B2</button>
                                 </div>
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="B3"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">B3</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">B3</button>
                                     <button id="B4"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">B4</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">B4</button>
                                 </div>
                             </div>
                         </div>
                         <!-- serial C -->
-                        <div class="flex gap-6 items-center text-lg text-[#03071280] font-medium">
+                        <div class="flex gap-2 md:gap-6 items-center text-lg text-[#03071280] font-medium">
                             <h4 class="w-6">C</h4>
                             <div class="flex justify-between w-full">
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="C1"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">C1</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">C1</button>
                                     <button id="C2"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">C2</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">C2</button>
                                 </div>
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="C3"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">C3</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">C3</button>
                                     <button id="C4"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">C4</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">C4</button>
                                 </div>
                             </div>
                         </div>
                         <!-- serial D -->
-                        <div class="flex gap-6 items-center text-lg text-[#03071280] font-medium">
+                        <div class="flex gap-2 md:gap-6 items-center text-lg text-[#03071280] font-medium">
                             <h4 class="w-6">D</h4>
                             <div class="flex justify-between w-full">
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="D1"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">D1</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">D1</button>
                                     <button id="D2"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">D2</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">D2</button>
                                 </div>
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="D3"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">D3</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">D3</button>
                                     <button id="D4"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">D4</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">D4</button>
                                 </div>
                             </div>
                         </div>
                         <!-- serial E -->
-                        <div class="flex gap-6 items-center text-lg text-[#03071280] font-medium">
+                        <div class="flex gap-2 md:gap-6 items-center text-lg text-[#03071280] font-medium">
                             <h4 class="w-6">E</h4>
                             <div class="flex justify-between w-full">
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="E1"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">E1</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">E1</button>
                                     <button id="E2"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">E2</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">E2</button>
                                 </div>
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="E3"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">E3</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">E3</button>
                                     <button id="E4"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">E4</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">E4</button>
                                 </div>
                             </div>
                         </div>
                         <!-- serial F -->
-                        <div class="flex gap-6 items-center text-lg text-[#03071280] font-medium">
+                        <div class="flex gap-2 md:gap-6 items-center text-lg text-[#03071280] font-medium">
                             <h4 class="w-6">F</h4>
                             <div class="flex justify-between w-full">
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="F1"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">F1</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">F1</button>
                                     <button id="F2"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">F2</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">F2</button>
                                 </div>
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="F3"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">F3</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">F3</button>
                                     <button id="F4"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">F4</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">F4</button>
                                 </div>
                             </div>
                         </div>
                         <!-- serial G -->
-                        <div class="flex gap-6 items-center text-lg text-[#03071280] font-medium">
+                        <div class="flex gap-2 md:gap-6 items-center text-lg text-[#03071280] font-medium">
                             <h4 class="w-6">G</h4>
                             <div class="flex justify-between w-full">
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="G1"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">G1</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">G1</button>
                                     <button id="G2"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">G2</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">G2</button>
                                 </div>
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="G3"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">G3</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">G3</button>
                                     <button id="G4"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">G4</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">G4</button>
                                 </div>
                             </div>
                         </div>
                         <!-- serial H -->
-                        <div class="flex gap-6 items-center text-lg text-[#03071280] font-medium">
+                        <div class="flex gap-2 md:gap-6 items-center text-lg text-[#03071280] font-medium">
                             <h4 class="w-6">H</h4>
                             <div class="flex justify-between w-full">
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="H1"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">H1</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">H1</button>
                                     <button id="H2"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">H2</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">H2</button>
                                 </div>
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="H3"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">H3</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">H3</button>
                                     <button id="H4"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">H4</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">H4</button>
                                 </div>
                             </div>
                         </div>
                         <!-- serial I -->
-                        <div class="flex gap-6 items-center text-lg text-[#03071280] font-medium">
+                        <div class="flex gap-2 md:gap-6 items-center text-lg text-[#03071280] font-medium">
                             <h4 class="w-6">I</h4>
                             <div class="flex justify-between w-full">
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="I1"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">I1</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">I1</button>
                                     <button id="I2"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">I2</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">I2</button>
                                 </div>
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="I3"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">I3</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">I3</button>
                                     <button id="I4"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">I4</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">I4</button>
                                 </div>
                             </div>
                         </div>
                         <!-- serial J -->
-                        <div class="flex gap-6 items-center text-lg text-[#03071280] font-medium">
+                        <div class="flex gap-2 md:gap-6 items-center text-lg text-[#03071280] font-medium">
                             <h4 class="w-6">J</h4>
                             <div class="flex justify-between w-full">
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="J1"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">J1</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">J1</button>
                                     <button id="J2"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">J2</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">J2</button>
                                 </div>
-                                <div class="grid grid-cols-2 gap-8">
+                                <div class="grid grid-cols-2 gap-2 md:gap-8">
                                     <button id="J3"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">J3</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">J3</button>
                                     <button id="J4"
-                                        class="btn seat min-w-32 text-[#03071280] text-lg font-medium border-none">J4</button>
+                                        class="btn seat w-14 md:min-w-28 lg:min-w-40 xl:min-w-24 2xl:min-w-32 bg-[#F7F8F8] text-[#03071280] text-lg font-medium border-none">J4</button>
                                 </div>
                             </div>
                         </div>
@@ -447,14 +463,14 @@
                 </div>
 
                 <!-- input section start -->
-                <div class="pl-6">
+                <div class="pt-8 md:pt-10 xl:pt-0 pl-0 xl:pl-6">
                     <div class="divide-y-2 divide-dashed mb-6">
                         <h4 class="text-2xl pb-4 text-[#030712] font-raleway font-semibold">Select Your Seat</h4>
                         <div></div>
                     </div>
 
                     <!-- form input field -->
-                    <div class="bg-[#F7F8F8] p-6 rounded-3xl">
+                    <div class="bg-[#F7F8F8] p-3 md:p-6 rounded-xl md:rounded-3xl">
                         <div class="overflow-x-auto">
                             <table class="table">
                                 <!-- head -->
@@ -479,8 +495,8 @@
                             </div>
                             <div id="coupon-input-container" class="px-3">
                                 <label class="input flex items-center gap-2 pr-1">
-                                    <input id="coupon-field" type="text" class="grow" placeholder="Have any coupon?"
-                                        disabled />
+                                    <input id="coupon-field" type="text" class="grow w-full"
+                                        placeholder="Have any coupon?" disabled />
                                     <button onclick="couponCodeApply()" id="apply-btn"
                                         class="bg-[#1DD100] px-4 py-2 text-white font-semibold rounded-lg"
                                         disabled>Apply</button>
@@ -523,7 +539,8 @@
                                     disabled>Next</button>
                             </div>
                         </label>
-                        <div class="flex gap-10 items-center justify-center mt-8 text-[#03071266]">
+                        <div
+                            class="flex gap-8 md:gap-14 items-center justify-center mt-8 text-xs md:text-base text-[#03071266]">
                             <p class="border-b-2"><a href="">Terms and Conditions</a></p>
                             <p class="border-b-2"><a href="">Cancellation Policy</a></p>
                         </div>
@@ -532,18 +549,19 @@
             </div>
         </section>
     </main>
-    <footer class="py-40 bg-[#030712]">
+    <footer class="py-28 lg:py-36 px-2 bg-[#030712]">
         <div class="container mx-auto divide-y-2 divide-gray-500 divide-dashed">
             <div class="footer justify-between
             pb-16">
                 <aside>
                     <h2 class="font-raleway text-4xl font-extrabold text-white">Bus<span
                             class="text-[#1DD100]">B</span>reeze</h2>
-                    <p class="text-lg text-gray-300">Let BusBreeze be your trusted companion on the road. <br> Sit back,
+                    <p class="text-sm md:text-base lg:text-lg text-gray-300">Let BusBreeze be your trusted companion on
+                        the road. <br> Sit back,
                         relax, and let the journey begin with BusBreeze.</p>
                 </aside>
                 <nav class="space-y-2">
-                    <h6 class="text-white text-xl font-semibold font-raleway">Download our app</h6>
+                    <h6 class="text-white text-base lg:text-xl font-semibold font-raleway">Download our app</h6>
                     <div
                         class="border-2 border-white rounded-lg flex gap-3 items-center justify-center px-4 py-2 cursor-pointer">
                         <div>
@@ -551,16 +569,17 @@
                         </div>
                         <div>
                             <p class="text-xs font-medium text-white">Get IT ON</p>
-                            <h5 class="text-xl font-semibold text-white">Google Play</h5>
+                            <h5 class=" text-base lg:text-xl font-semibold text-white">Google Play</h5>
                         </div>
                     </div>
                 </nav>
             </div>
-            <div class="flex justify-between pt-16">
+            <div class="flex flex-col-reverse md:flex-row justify-between gap-6 pt-16">
                 <div>
-                    <p class="text-gray-300">Copyright&copy;All rights reserved, BusBreeze Limited. 2024</p>
+                    <p class="text-gray-300 text-xs lg:text-base">Copyright&copy;All rights reserved, BusBreeze Limited.
+                        2024</p>
                 </div>
-                <div class="font-medium text-white space-x-6">
+                <div class="font-medium text-xs lg:text-base text-white space-x-2 lg:space-x-6">
                     <a href="">Terms & conditions</a>
                     <a href="">Return & refund policy</a>
                     <a href="">Privacy policy</a>

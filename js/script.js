@@ -16,6 +16,8 @@ for (const button of seatButton) {
 
     button.addEventListener('click', function (e) {
         const buttonId = button.innerText;
+        const ticketPriceText = getElementsInnerTextById('ticket-price');
+        const ticketPrice = parseFloat(ticketPriceText);
 
 
         const selectedSeatText = getElementsInnerTextById('seat-count');
@@ -24,11 +26,63 @@ for (const button of seatButton) {
             removeElementsAttributeById('coupon-field', 'disabled');
             removeElementsAttributeById('apply-btn', 'disabled');
         }
+        else {
+            setElementsAttributeById('coupon-field', 'disabled');
+            setElementsAttributeById('apply-btn', 'disabled');
+        }
+
+        const btn = getElementsById(buttonId);
+        if (btn.classList.contains('selected')) {
+            btn.classList.remove('selected');
+
+            seatCount -= 1;
+            setElementsInnerTextById('seat-count', seatCount);
+            if (seatCount < 4) {
+                const discountedContainer = getElementsById('discounted-container');
+                const couponInput = getElementsById('coupon-field');
+                couponInput.value = '';
+                removeElementsAttributeById('coupon-input-container', 'hidden');
+                discountedContainer.classList.add('hidden');
+            }
+
+            if (seatCount === 0) {
+                setElementsAttributeById('next-btn', 'disabled');
+            }
+
+            availableSeat = availableSeat + 1;
+            setElementsInnerTextById('available-seat', availableSeat);
+
+            btn.style.backgroundColor = '';
+            btn.style.color = '';
+
+            totalPrice = totalPrice - ticketPrice;
+            setElementsInnerTextById('total-price', totalPrice);
+
+            grandTotal = totalPrice;
+            setElementsInnerTextById('grand-total', grandTotal);
+
+            const tableBody = getElementsById('tbody');
+            const tableRow = tableBody.childNodes[3];
+            tableBody.removeChild(tableRow);
+            return;
+        }
+        btn.classList.add('selected');
 
         seatCount += 1;
         if (seatCount > 4) {
+            btn.classList.remove('selected');
+
+            seatCount -= 1;
+            setElementsInnerTextById('seat-count', seatCount);
+
             alert('A maximum of 4 seats can be purchased.');
             return;
+        }
+
+        const numberField = getElementsById('number-field')
+        const fieldValue = numberField.value;
+        if (fieldValue.length === 11) {
+            removeElementsAttributeById('next-btn', 'disabled');
         }
 
         availableSeat = availableSeat - 1;
@@ -36,10 +90,10 @@ for (const button of seatButton) {
 
         setElementsInnerTextById('seat-count', seatCount);
         setElementsColorById(buttonId);
-        setElementsAttributeById(buttonId, 'disabled');
+        // setElementsAttributeById(buttonId, 'disabled');
 
-        const ticketPriceText = getElementsInnerTextById('ticket-price');
-        const ticketPrice = parseFloat(ticketPriceText);
+        // const ticketPriceText = getElementsInnerTextById('ticket-price');
+        // const ticketPrice = parseFloat(ticketPriceText);
         appendTableDataById('tbody', buttonId, 'Economy', ticketPriceText);
 
         totalPrice = totalPrice + ticketPrice;
@@ -56,7 +110,7 @@ numberField.addEventListener('keyup', function (e) {
     const selectedSeatText = getElementsInnerTextById('seat-count');
     const selectedSeat = parseInt(selectedSeatText);
     if (selectedSeat > 0 && phoneNumberText.length === 11) {
-        removeElementsAttributeById('next-btn', 'disabled')
+        removeElementsAttributeById('next-btn', 'disabled');
     }
     else {
         setElementsAttributeById('next-btn', 'disabled');

@@ -64,4 +64,5 @@ function appendTableDataById(elementId, td1, td2, td3) {
     newRow.appendChild(newData2);
     newRow.appendChild(newData3);
     element.appendChild(newRow);
+    return newRow;
 }
